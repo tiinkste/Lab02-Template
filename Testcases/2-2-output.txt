@@ -1,0 +1,2 @@
+Point 1: Point 2: Point 3: 
+P1<->P3: 27,685.11

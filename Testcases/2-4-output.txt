@@ -1,0 +1,2 @@
+Point 1: Point 2: Point 3: 
+All points are equal distance: 5.00
