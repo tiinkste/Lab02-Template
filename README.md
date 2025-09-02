@@ -173,17 +173,17 @@ Note: This input ends the program with exit code 0 (customer buying nothing is a
 
 ### Overview
 
-After the success of your checkout program, SomeCorp assigns you to help with their mobile delivery service. As it turns out, their system is unable to properly assign drivers to the closest delivery points. To help with this, your task is to create a program that takes in as input three sets of (X, Y) coordinates. Then, you will output which points are the two closest to each other and the distance.
+After the success of your checkout program, SomeCorp assigns you to help with their mobile delivery service. As it turns out, their system is unable to properly assign drivers to the closest delivery points. To help with this, your task is to create a program that takes in as input three pairs of $(x, y)$ coordinates. Then, you will output which two points are the closest to each other and their distance.
 
 Since computing the distance between two points requires using a square root function, you will have to use `sqrtf()` from `math.h`. This function takes in a `float` as an argument and returns the square root of the number. In order to use this library, you must `#include` it in your code and compile your program using the linking flag `-lm`. Note that linking flags must appear at the end of your `gcc` command, or else they will not work.
 
 Note that there are many different ways to take a square root using `math.h`. You may notice that there are three different square root functions, `sqrtf()`, `sqrt()`, and `sqrtl()`. These use `float`s, `double`s, and `long double`s respectively. In this lab, we will only deal with `float`s for now, and so you should use **`sqrtf()`**. Using other functions may lead to slightly varying results which could impact marking.
 
-Your program should be written in the the `src` directory, inside a file named `ex2q2.c`. The full path is `src/ex2q2.c`.
+Your program should be written in the the `src` directory, inside a file named `ex2q2.c`. The full path is `src/ex2q2.c` (from your working directory).
 
 ### Input
 
-Your program should prompt the user for 3 sets of coordinates in the format `(<float>, <float>)`. You must immediately terminate the program with a non-zero exit code if any invalid input is read in. Again, recall from Part 1's input handling section that valid input is defined as successfully read in input within the required range. The input is guaranteed to fit within a `float` on the lab machine.
+Your program should prompt the user for 3 pairs of coordinates in the format `(<float>, <float>)`. You must immediately terminate the program with a non-zero exit code if any invalid input is read in. Again, recall from Part 1's input handling section that valid input is defined as successfully read in input within the required range. The input is guaranteed to fit within a `float` on the lab machine.
 
 ### Output
 
@@ -193,7 +193,7 @@ Your program should output all pairs of points that are minimal in distance. The
 Pa<->Pb: <float>
 ```
 
-Where `a` and `b` is the number of the point with `a < b`, and `<float>` is the distance between them, rounded to **two decimal places**. You should only print the smallest distance out of all the possible combinations of points. Note that the **distances should be compared before rounding**. If there are multiple that have the same distance, you must print all of them like so:
+Where `a` and `b` is the number of the point with `a < b`, and `<float>` is the distance between them, rounded to **two decimal places**. You should only print the smallest distance out of all the possible pairs of points. Note that the **distances should be compared before rounding**. If there are multiple pairs that have the same distance, you must print all of them like so:
 
 ```
 Pa<->Pb: <float>
@@ -202,7 +202,7 @@ Px<->Py: <float>
 
 Where `a < b`, `x < y`, `a <= x`, and `b <= y`.
 
-If all combinations of points share the same distance, you should output it like so:
+If all pairs of points share the same distance, you should output it like so:
 
 ```
 All points are equal distance: <float>
