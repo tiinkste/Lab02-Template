@@ -185,6 +185,9 @@ Your program should be written in the the `src` directory, inside a file named `
 
 Your program should prompt the user for 3 pairs of coordinates in the format `(<float>, <float>)`. You must immediately terminate the program with a non-zero exit code if any invalid input is read in. Again, recall from Part 1's input handling section that valid input is defined as successfully read in input within the required range. The input is guaranteed to fit within a `float` on the lab machine.
 
+> [!NOTE]
+> Remember to account for leading whitespace in the input (such as new line characters). Recall that `scanf()` automatically discards leading whitespace with format specifiers such as `%d`, however does not do so with literal characters like `(`. This means scanf will fail to match `(` if leading whitespace is present.
+
 ### Output
 
 Your program should output all pairs of points that are minimal in distance. The following is the output format:
