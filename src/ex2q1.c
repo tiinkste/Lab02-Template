@@ -84,6 +84,8 @@ int main(int argc, char* argv[]){
 	
 	if(valid_input){
 		return 1; }
+	if(apples_wanted == 0 && chips_wanted == 0 && carrots_wanted == 0 && candy_wanted == 0){
+		return 0; }
 	
 	// Check if "For every 2 bags of chips purchased, get 1 candy 50% off!" promotion applies
 	if (chips_wanted >= 2 && candy_wanted >= 1){
